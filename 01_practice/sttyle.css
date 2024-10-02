@@ -4,10 +4,11 @@ body {
     color: #000;
     font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
     font-size: 14px;
+    line-height: 1.7em;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     vertical-align: bottom;
 }
@@ -27,5 +28,107 @@ header {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.05;
-    line-height: 0.04em;
+    line-height: 1.0em;
 }
+
+/*about*/
+.about {
+    background: url(./images/bg_main.png) center center /cover;
+}
+
+.about .inner {
+    padding-top: 240px;
+    padding-bottom: 80px;
+}
+
+.message {
+    background-color: #fff;
+    width: 343px;
+    height: 266px;
+}
+
+.about h2 {
+    padding: 40px 132px 30px 47px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    letter-spacing: 0.05;
+    line-height: 1.6em;
+}
+
+.about p {
+    padding: 0 40px 40px;
+    font-size: 36px;
+    letter-spacing: 0.05;
+    line-height: 1.38em;
+}
+
+/*discussion*/
+.discussion {
+    margin: 100px 0;
+}
+
+.discussion h2 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0.05;
+    line-height: 1.2em;
+}
+
+.discussion .post {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.discussion p {
+    padding: 20px 20px 20px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.discussion ul {
+    display: flex;
+}
+
+.discussion li {
+    padding: 5px 12px;
+    color: #1E1E1E;
+    background-color: #F5F5F5;
+}
+
+.discussion .tag {
+    padding-left: 10px;
+}
+
+/*footer*/
+/* footer {
+    padding: 100px 0;
+    color: #fff;
+    background-color: #1E1E1E;
+}
+
+footer dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+footer dd {
+    padding-left: 50px;
+}
+
+footer dl::after {
+    content: "";
+    display: block;
+    margin: 20px auto;
+    border-bottom: #fff solid 1px;
+    width: 370px;
+} */
+@media(min-width:640) {}

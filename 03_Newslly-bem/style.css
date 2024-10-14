@@ -52,8 +52,8 @@ img {
     margin-bottom: 30px;
     padding-left: 10px;
     color: #202124;
-    border-left: #FA6980 solid;
-    border-width: 10px 10px;
+    border-left: 5px #FA6980 solid;
+    border-width: 10px;
     font-size: 24px;
     font-weight: bold;
     line-height: 1.4em;

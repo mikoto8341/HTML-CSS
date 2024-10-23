@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/*declaration---------------------------*/
+$color: #000000;
+$color-accent: #FF9900;
+
+@mixin inner() {
+    max-width: 1000px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*base-------------------------------*/
+body {
+    color: #31353B;
+    font-family: Helvetica, sans-serif, Arial;
+    font-size: 15px;
+    letter-spacing: (20/100)*1em;
+    line-height: (26/15);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/*common--------------------------------*/
+/*header*/
+.header {
+    margin: 50px 0 80px;
+
+    &__inner {
+        @include inner();
+        @include flex();
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__category {
+        margin-left: 30px;
+    }
+}
+
+.list {
+    &__home {}
+}

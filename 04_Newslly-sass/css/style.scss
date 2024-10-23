@@ -31,31 +31,6 @@ $color-time: #BBBBBB;
     text-transform: uppercase;
 }
 
-@mixin category() {
-    margin-bottom: 10px;
-    color: $color-accent;
-    font-size: 12px;
-    font-style: oblique;
-    line-height: (20/12);
-}
-
-@mixin title-sub() {
-    margin-bottom: 15px;
-    color: $color-main;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: (23/18);
-}
-
-@mixin time() {
-    margin-top: 22px;
-    padding-left: 26px;
-    color: $color-time;
-    background: url(../images/icon_time.png) no-repeat left center;
-    font-size: 12px;
-    line-height: (20/12);
-}
-
 @mixin btn() {
     display: block;
     width: 160px;
@@ -78,6 +53,12 @@ body {
     font-size: 14px;
     line-height: (24/14);
     letter-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
 }
 
 /*common----------------------------*/
@@ -106,6 +87,43 @@ body {
     }
 }
 
+/*module------------------------------*/
+/*post*/
+.post__category {
+    margin-bottom: 10px;
+    color: $color-accent;
+    font-size: 12px;
+    font-style: oblique;
+    line-height: (20/12);
+}
+
+.post__title {
+    margin-bottom: 15px;
+    color: $color-main;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: (23/18);
+}
+
+/*time*/
+.time {
+    margin-top: 22px;
+    padding-left: 26px;
+    color: $color-time;
+    background: url(../images/icon_time.png) no-repeat left center;
+    font-size: 12px;
+    line-height: (20/12);
+}
+
+/*card*/
+.card__title {
+    margin-bottom: 15px;
+    color: $color-main;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: (23/18);
+}
+
 /*index.html---------------------------------*/
 /*more*/
 .more {
@@ -128,22 +146,6 @@ body {
         width: (380/800)*100%;
         margin-bottom: 60px;
     }
-}
-
-/*post*/
-.post {
-    &__category {
-        @include category();
-    }
-
-    &__title {
-        @include title-sub();
-    }
-}
-
-/*time*/
-.time {
-    @include time();
 }
 
 /*trending*/
@@ -174,10 +176,6 @@ body {
 .card {
     &__body {
         padding: 35px;
-    }
-
-    &__title {
-        @include title-sub();
     }
 }
 
@@ -224,12 +222,5 @@ body {
     &__item {
         width: (240/800)*100%;
         background-color: #fff;
-    }
-}
-
-/*card*/
-.card {
-    &__time {
-        @include time();
     }
 }

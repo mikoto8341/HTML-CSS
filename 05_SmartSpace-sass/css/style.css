@@ -1,0 +1,37 @@
+/*declaration---------------------------*/
+/*base-------------------------------*/
+body {
+  color: #31353B;
+  font-family: Helvetica, sans-serif, Arial;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  line-height: 1.7333333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/*common--------------------------------*/
+/*header*/
+.header {
+  margin: 50px 0 80px;
+}
+.header__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__list {
+  display: flex;
+}
+.header__category {
+  margin-left: 30px;
+}
+/*# sourceMappingURL=style.css.map */

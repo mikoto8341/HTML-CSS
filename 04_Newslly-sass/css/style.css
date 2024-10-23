@@ -8,6 +8,12 @@ body {
   letter-spacing: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
 /*common----------------------------*/
 /*header*/
 .header {
@@ -35,6 +41,43 @@ body {
 }
 .footer__copy {
   font-size: 12px;
+}
+
+/*module------------------------------*/
+/*post*/
+.post__category {
+  margin-bottom: 10px;
+  color: #FA6980;
+  font-size: 12px;
+  font-style: oblique;
+  line-height: 1.6666666667;
+}
+
+.post__title {
+  margin-bottom: 15px;
+  color: #202124;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2777777778;
+}
+
+/*time*/
+.time {
+  margin-top: 22px;
+  padding-left: 26px;
+  color: #BBBBBB;
+  background: url(../images/icon_time.png) no-repeat left center;
+  font-size: 12px;
+  line-height: 1.6666666667;
+}
+
+/*card*/
+.card__title {
+  margin-bottom: 15px;
+  color: #202124;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2777777778;
 }
 
 /*index.html---------------------------------*/
@@ -68,32 +111,6 @@ body {
 .more__item {
   width: 47.5%;
   margin-bottom: 60px;
-}
-
-/*post*/
-.post__category {
-  margin-bottom: 10px;
-  color: #FA6980;
-  font-size: 12px;
-  font-style: oblique;
-  line-height: 1.6666666667;
-}
-.post__title {
-  margin-bottom: 15px;
-  color: #202124;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.2777777778;
-}
-
-/*time*/
-.time {
-  margin-top: 22px;
-  padding-left: 26px;
-  color: #BBBBBB;
-  background: url(../images/icon_time.png) no-repeat left center;
-  font-size: 12px;
-  line-height: 1.6666666667;
 }
 
 /*trending*/
@@ -131,13 +148,6 @@ body {
 /*card*/
 .card__body {
   padding: 35px;
-}
-.card__title {
-  margin-bottom: 15px;
-  color: #202124;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.2777777778;
 }
 
 /*btn*/
@@ -204,15 +214,5 @@ body {
 .discovery__item {
   width: 30%;
   background-color: #fff;
-}
-
-/*card*/
-.card__time {
-  margin-top: 22px;
-  padding-left: 26px;
-  color: #BBBBBB;
-  background: url(../images/icon_time.png) no-repeat left center;
-  font-size: 12px;
-  line-height: 1.6666666667;
 }
 /*# sourceMappingURL=style.css.map */

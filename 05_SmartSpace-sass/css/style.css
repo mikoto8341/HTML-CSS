@@ -68,8 +68,10 @@ img {
   margin-left: 30px;
   font-weight: bold;
 }
+.footer__menu {
+  margin-bottom: 40px;
+}
 .footer__copy {
-  margin-top: 40px;
   font-size: 12px;
   font-weight: bold;
   line-height: 2.1666666667;

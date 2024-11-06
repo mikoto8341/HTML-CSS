@@ -311,4 +311,26 @@ img {
     aspect-ratio: 380/285;
   }
 }
+.floor .post__pic {
+  position: relative;
+}
+.floor .post__pic::before {
+  position: absolute;
+  content: "1";
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #985E5B;
+  top: 10.5263157895%;
+  left: 7.8947368421%;
+  width: 13.1578947368%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
 /*# sourceMappingURL=style.css.map */

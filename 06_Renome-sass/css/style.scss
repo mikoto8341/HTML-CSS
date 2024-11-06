@@ -90,6 +90,26 @@ img {
 .post {
     &__pic {
         margin-bottom: 30px;
+        position: relative;
+    }
+
+    &__number {
+        position: absolute;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: $color-main;
+        top: (30/285)*100%;
+        left: (30/380)*100%;
+        width: (50/380)*100%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: (100/1000)*1em;
+        line-height: (18/18);
     }
 
     &__text {
@@ -297,12 +317,16 @@ img {
     }
 
     &__list {
+        margin-bottom: -80px;
+
         @include m-query(desktop) {
             @include m-flex(stretch);
         }
     }
 
     &__item {
+        margin-bottom: 80px;
+
         @include m-query(desktop) {
             width: (380/1200)*100%;
         }
@@ -315,30 +339,6 @@ img {
             @include m-query(desktop) {
                 aspect-ratio: 380/285;
             }
-        }
-    }
-
-    .post__pic {
-        position: relative;
-
-        &::before {
-            position: absolute;
-            content: "1";
-            display: inline-block;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            background-color: $color-main;
-            top: (30/285)*100%;
-            left: (30/380)*100%;
-            width: (50/380)*100%;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: (100/1000)*1em;
-            line-height: (18/18);
         }
     }
 }

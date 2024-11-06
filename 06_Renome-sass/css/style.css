@@ -51,6 +51,25 @@ img {
 /*post*/
 .post__pic {
   margin-bottom: 30px;
+  position: relative;
+}
+.post__number {
+  position: absolute;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #985E5B;
+  top: 10.5263157895%;
+  left: 7.8947368421%;
+  width: 13.1578947368%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
 }
 .post__text {
   margin-bottom: 50px;
@@ -287,6 +306,9 @@ img {
   line-height: 1.5;
   border-bottom: 1px #ddd solid;
 }
+.floor__list {
+  margin-bottom: -80px;
+}
 @media screen and (min-width: 800px) {
   .floor__list {
     display: flex;
@@ -294,6 +316,9 @@ img {
     justify-content: space-between;
     align-items: stretch;
   }
+}
+.floor__item {
+  margin-bottom: 80px;
 }
 @media screen and (min-width: 800px) {
   .floor__item {
@@ -310,27 +335,5 @@ img {
   .floor__item img {
     aspect-ratio: 380/285;
   }
-}
-.floor .post__pic {
-  position: relative;
-}
-.floor .post__pic::before {
-  position: absolute;
-  content: "1";
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  background-color: #985E5B;
-  top: 10.5263157895%;
-  left: 7.8947368421%;
-  width: 13.1578947368%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  line-height: 1;
 }
 /*# sourceMappingURL=style.css.map */

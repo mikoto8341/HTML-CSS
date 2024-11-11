@@ -58,6 +58,11 @@ img {
     height: auto;
 }
 
+::selection {
+    color: $color-main;
+    background-color: #fff;
+}
+
 /*coomon-------------------------------*/
 /*header*/
 .header {
@@ -68,6 +73,7 @@ img {
 
     &__inner {
         @include m-inner();
+
         @include m-flex();
     }
 }
@@ -106,6 +112,10 @@ img {
     }
 }
 
+.btn--second {
+    background-color: #EDAA14;
+}
+
 /*footer*/
 .footer {
     padding: 60px 0 160px;
@@ -124,7 +134,7 @@ img {
 /*visual*/
 .visual {
     margin-bottom: 80px;
-    padding: 250px 0 150px;
+    padding: 279px 0 150px;
     background: url(../images/bg_mainvisual.png) no-repeat center/cover;
 
     @include m-query(desktop) {
@@ -178,6 +188,8 @@ img {
     }
 
     &__list {
+        margin-bottom: -60px;
+
         @include m-query(desktop) {
             @include m-flex();
         }
@@ -193,14 +205,113 @@ img {
 /*card*/
 .card {
     img {
-        aspect-ratio: (16/9);
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
 
         @include m-query(desktop) {
-            aspect-ratio: (4/3);
+            aspect-ratio: 4/3;
         }
     }
 
     &__title {
         @include m-title();
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+}
+
+/*about.html---------------------------*/
+/*service*/
+.service {
+    padding: 180px 0 80px;
+
+    &__inner {
+        @include m-inner();
+    }
+
+    &__title {
+        margin-bottom: -17px;
+        color: #2B2B2B;
+        font-size: 38px;
+        font-weight: bold;
+        text-align: center;
+        line-height: (46/38);
+    }
+
+    &__list {
+        @include m-query(desktop) {
+            @include m-flex();
+        }
+    }
+
+    &__info {
+        margin-top: 67px;
+
+        @include m-query(desktop) {
+            width: (420/900)*100%;
+        }
+    }
+
+}
+
+/*post*/
+.post {
+    img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+
+        @include m-query(desktop) {
+            aspect-ratio: 4/3;
+        }
+    }
+
+    &__title {
+        @include m-title();
+    }
+}
+
+.post:nth-child(odd) .post__title {
+    margin-left: auto;
+}
+
+/*testmonials*/
+.testmonials {
+    padding: 80px 0;
+    background: url(../images/bg_testimonials.png) no-repeat center/cover;
+    text-align: center;
+
+    &__inner {
+        padding: 50px;
+        @include m-inner();
+        background-color: #fff;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        color: #2B2B2B;
+        font-size: 38px;
+        font-weight: bold;
+        text-align: center;
+        line-height: (46/38);
+    }
+
+    &__text {
+        margin: 37px 0 30px;
+        color: #5A5A5A;
+        font-size: 16px;
+        font-style: italic;
+        line-height: (32/16);
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &__address {
+        margin-bottom: 40px;
     }
 }

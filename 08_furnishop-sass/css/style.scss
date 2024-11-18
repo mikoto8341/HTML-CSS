@@ -34,6 +34,23 @@ $breakpoints: (
     @return ($myvalue/$value)+em;
 }
 
+@mixin m-title-main() {
+    margin-bottom: (66em/48
+    );
+padding-bottom: (30em/48);
+font-size: f-rem(48);
+font-weight: bold;
+line-height: (58/48);
+border-bottom: 2px solid;
+}
+
+@mixin m-title-sub() {
+    margin-bottom: (25em/24);
+    font-size: f-rem(24);
+    font-weight: bold;
+    line-height: (29/24);
+}
+
 /*base--------------------*/
 /*html*/
 // html {
@@ -53,10 +70,9 @@ body {
         Calibri,
         'Trebuchet MS',
         sans-serif;
-    font-size: f-rem(16
-    );
-letter-spacing: 0;
-line-height: (27/16);
+    font-size: f-rem(16);
+    letter-spacing: 0;
+    line-height: (27/16);
 }
 
 /*img*/
@@ -64,6 +80,41 @@ img {
     max-width: 100%;
     vertical-align: bottom;
     height: auto;
+}
+
+/*post*/
+.post {
+    @include m-flex(flex-start);
+
+    &__pic {
+        width: 200px;
+        margin-right: (20em/16);
+
+        img {
+            width: 100%;
+            aspect-ratio: (5/3);
+            object-fit: cover;
+
+            @include m-query(desktop) {
+                aspect-ratio: (1/1);
+            }
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__title {
+        @include m-title-sub();
+    }
+}
+
+/*card*/
+.card {
+    padding: (45em/16);
+    background-color: $color-bg;
+    text-align: center;
 }
 
 /*index.html--------------------*/
@@ -126,70 +177,44 @@ img {
 
 /*about*/
 .about {
-    margin: (80em/16) 0 (120em/16);
-
     &__inner {
         @include m-inner();
     }
 
     &__title {
-        margin-bottom: (60em/48);
-        padding-bottom: (30em/48);
-        font-size: f-rem(48);
-        font-weight: bold;
-        line-height: (58/48);
-        border-bottom: 2px $color-main solid;
-    }
-
-    &__post {
-        margin-top: (-50em/16);
-        @include m-flex();
+        @include m-title-main();
     }
 }
 
-/*post*/
-.post {
-    margin-top: (50em/16);
-    @include m-flex(flex-start);
-
-    @include m-query() {
-        width: (470/1000)*100%;
-    }
-
-    img {
-        width: 100%;
-        aspect-ratio: (200/120);
-        object-fit: cover;
-
-        @include m-query() {
-            aspect-ratio: 200/200;
-        }
-    }
-
-    &__pic {
-        width: (200/640)*100%;
-
-        @include m-query() {
-            width: (200/470)*100%;
-        }
-    }
-
-    &__info {
-        width: (420/640)*100%;
-
-        @include m-query() {
-            width: (250/470)*100%;
-        }
+/*products*/
+.products {
+    &__inner {
+        @include m-inner();
     }
 
     &__title {
-        @include m-query() {
-            margin-bottom: (25em/24);
-        }
+        @include m-title-main();
+    }
 
-        font-size: (24em/16);
-        font-weight: bold;
-        line-height: (29/24);
+    &__list {
+        margin-bottom: (-50em/16);
+        @include m-flex(stretch);
+    }
+
+    &__item {
+        margin-bottom: (50em/16);
+        width: (300/640)*100%;
+
+        @include m-query(desktop) {
+            width: (300/1000)*100%;
+        }
+    }
+
+    .card__pic {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        object-position: center bottom;
     }
 }
 

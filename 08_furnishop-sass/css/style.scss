@@ -82,6 +82,7 @@ img {
     height: auto;
 }
 
+/*module--------------------*/
 /*post*/
 .post {
     @include m-flex(flex-start);
@@ -114,6 +115,26 @@ img {
 .card {
     padding: (45em/16);
     background-color: $color-bg;
+    text-align: center;
+
+    &__title {
+        @include m-title-sub();
+    }
+
+    &__catch {
+        margin-bottom: (30em/16);
+    }
+}
+
+.btn {
+    margin: (60em/16) auto 0;
+    padding: (17em/16) 0;
+    display: block;
+    width: 165px;
+    color: #fff;
+    background-color: $color-main;
+    border-radius: 10px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -182,17 +203,36 @@ img {
     }
 
     &__title {
+        margin-top: (80em/48);
         @include m-title-main();
+    }
+
+    &__list {
+        @include m-query(desktop) {
+            @include m-flex(flex-start);
+            margin-bottom: (-50em/16);
+        }
+    }
+
+    &__item {
+        margin-bottom: (50em/16);
+
+        @include m-query(desktop) {
+            width: (470/1000)*100%;
+        }
     }
 }
 
 /*products*/
 .products {
+    margin-bottom: (120em/16);
+
     &__inner {
         @include m-inner();
     }
 
     &__title {
+        margin-top: (80em/48);
         @include m-title-main();
     }
 
@@ -218,4 +258,62 @@ img {
     }
 }
 
-/*footer*/
+/* footer */
+.footer {
+    padding: (120em/16) 0;
+    background-color: $color-main;
+    color: #fff;
+
+    &__inner {
+        @include m-inner();
+
+        @include m-query(desktop) {
+            @include m-flex(flex-end);
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__title {
+        margin-bottom: (25em/24);
+        font-size: f-rem(24);
+        font-weight: bold;
+        line-height: (29/24);
+    }
+
+    &__navall {
+        @include m-flex(flex-start);
+        margin-bottom: (60em/16);
+
+        @include m-query(desktop) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__nav {
+        width: (300/640)*100%;
+
+        @include m-query(desktop) {
+            width: fit-content;
+            margin-left: (60em/16);
+        }
+    }
+
+    &__item {
+        margin-top: (15em/16);
+    }
+
+    &__info {
+        max-width: (250em/16);
+
+        .footer__title {
+            margin-bottom: (40em/24);
+        }
+    }
+
+    &__copy {
+        display: inline-block;
+        margin-top: (20em/12);
+        font-size: f-rem(12);
+        line-height: (20/12)
+    }
+}

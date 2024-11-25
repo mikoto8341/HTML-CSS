@@ -106,6 +106,7 @@ img {
 /*footer*/
 .footer {
     padding: (120em/14) 0 (200em/14);
+    background-color: $color-accent;
 
     &__inner {
         @include m-inner();
@@ -133,8 +134,11 @@ img {
     border-bottom: 1px solid;
 
     @include m-query(desktop) {
-        flex-direction: column;
+        margin-bottom: 0;
+        padding-bottom: 0;
         width: (540/1140)*100%;
+        display: flex;
+        flex-direction: column;
         border: none;
     }
 
@@ -147,11 +151,70 @@ img {
         margin-bottom: (40em/36);
         @include m-title-sub();
     }
+
+    &__text {
+        margin-top: auto;
+    }
 }
 
 .unit:last-child {
     padding-bottom: 0;
     border: none;
+}
+
+/*post*/
+.post {
+    margin-top: (80em/16);
+    margin-bottom: (120em/14);
+
+    @include m-query(desktop) {
+        &__info {
+            width: (500/1140)*100%;
+
+            &__pic {
+                width: (580/1140)*100%;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: (40em/36);
+        @include m-title-sub();
+    }
+
+    &__text {
+        margin-bottom: (40em/14);
+    }
+
+    &__tags::before {
+        content: "";
+        display: block;
+        width: 60px;
+        margin-bottom: (60em/14);
+        border: 1px solid;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: (20em/12);
+        margin-bottom: (20em/12);
+    }
+
+    &__item a {
+        display: block;
+        padding: (15em/12) (30em/12);
+        color: $color-text;
+        background-color: #fff;
+        border-radius: 20px;
+        font-size: f-rem(12);
+        font-weight: bold;
+        line-height: (14/12);
+    }
+
+    &__pic {
+        margin-top: (60em/14);
+        margin-bottom: (120em/14);
+    }
 }
 
 /*btn*/
@@ -162,6 +225,7 @@ img {
     width: 197px;
     color: #fff;
     background-color: $color-text;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -220,6 +284,41 @@ img {
         width: 38px;
         height: 38px;
         background-color: $color-bg;
+        border-radius: 50%;
+    }
+}
+
+/*features*/
+.features {
+    padding: (120em/14) 0;
+    background-color: $color-bg;
+
+    &__inner {
+        @include m-inner();
+    }
+
+    &__info {
+        margin-bottom: (-120em/14);
+
+        @include m-query(desktop) {
+            @include m-flex();
+            margin-bottom: (80em/16);
+        }
+    }
+
+    &__title {
+        @include m-title-main();
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    &__title::before {
+        content: "";
+        display: block;
+        margin: 0 auto (25em/48);
+        width: 38px;
+        height: 38px;
+        background-color: $color-accent;
         border-radius: 50%;
     }
 }

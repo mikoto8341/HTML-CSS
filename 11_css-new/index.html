@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSの新機能</title>
+    <style>
+        body {
+            font-size: clamp(0.75rem, 2vw, 1.12rem);
+        }
+
+        .card-container {
+            width: min(88%, 1200px);
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .card {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 4;
+        }
+
+        .card__image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 20px;
+        }
+
+        .info dt {
+            background-color: #ddd;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            justify-self: end;
+            align-self: center;
+        }
+
+        nav ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        nav li {
+            padding: 0 20px;
+            background-color: #ddd;
+            text-align: center;
+        }
+
+        .visual img {
+            width: 100%;
+            height: clamp(300px, 30vw, 500px);
+            object-fit: cover;
+        }
+
+        .contents {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 60px;
+        }
+
+        .contents h1 {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .box {
+            border: 2px dashed #ccc;
+            height: 1000px;
+            padding: 20px;
+        }
+
+        .box+.box {
+            margin-top: 40px;
+        }
+
+        .sticky_container {
+            border: 2px dashed #7f31d6;
+        }
+
+        .sticky_item {
+            background: #fff;
+            color: #7f31d6;
+            position: sticky;
+            top: 0;
+        }
+
+        .scroll_area {
+            background: #ccc;
+            margin-top: 60px;
+            height: 1000px;
+            padding: 40px;
+        }
+
+        #container :not(h1) {
+            text-align: center;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #container img:not(:first-child) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .fade {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 0.3s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ロゴ</h1>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="visual">
+        <img src="https://picsum.photos/1200/1200?random=2.webp" alt="">
+    </div>
+    <div class="card-container">
+        <article class="card fade">
+            <h2 class="card__title">Feeling Good</h2>
+            <img class="card__image" src="https://picsum.photos/400/300?random=1.webp" alt="" />
+            <p class="card__description">I AM A CAT. As yet I have no name.</p>
+            <div class="card__label">Goods</div>
+        </article>
+        <article class="card fade">
+            <h2 class="card__title">What's going on here?</h2>
+            <img class="card__image" src="https://picsum.photos/300/400?random=2.webp" alt="" />
+            <p class="card__description">
+                I have no idea where he was born. All I remember is that he used to meow and cry in a dim,
+                dank place.
+            </p>
+            <div class="card__label">Food</div>
+        </article>
+        <article class="card fade">
+            <h2 class="card__title">Soon the sun was setting as the wind blew over the pond.</h2>
+            <img class="card__image" src="https://picsum.photos/400/400?random=3.webp" alt="" />
+            <p class="card__description">It was here that I first saw a human being</p>
+            <div class="card__label">Health</div>
+        </article>
+        <article class="card fade">
+            <h2 class="card__title">I was getting very hungry.</h2>
+            <img class="card__image" src="https://picsum.photos/400/400?random=4.webp" alt="" />
+            <p class="card__description">
+                I later heard that it was a "shosei," the most ferocious and vicious race of human beings.
+            </p>
+            <div class="card__label">Food</div>
+        </article>
+        <article class="card fade">
+            <h2 class="card__title">I wanted to cry, but I couldn't speak</h2>
+            <img class="card__image" src="https://picsum.photos/400/300?random=5.webp" alt="" />
+            <p class="card__description">
+                It is said that these "shosei" would sometimes catch us and boil us for food.
+            </p>
+            <div class="card__label">Goods</div>
+        </article>
+        <article class="card fade">
+            <h2 class="card__title">It was getting dark, and it was raining</h2>
+            <img class="card__image" src="https://picsum.photos/300/400?random=6.webp" alt="" />
+            <p class="card__description">But at the time, I had no idea what to expect</p>
+            <div class="card__label">Goods</div>
+        </article>
+    </div>
+    <dl class="info">
+        <dt>住所</dt>
+        <dd>〒450-0002 愛知県名古屋市中村区名駅3-24-15</dd>
+        <dt>電話番号</dt>
+        <dd>000-1234-5678</dd>
+        <dt>メールアドレス</dt>
+        <dd>hoge@trident.ac.jp</dd>
+    </dl>
+    <div class="contents">
+        <h1>position:sticky;の基本的な使い方</h1>
+        <div class="box sticky_container">
+            <h2 class="sticky_item">スティッキーアイテムを指定したタイトル</h2>
+            <p>コンテンツ</p>
+        </div>
+        <div class="box sticky_container">
+            <h2 class="sticky_item">スティッキーアイテムを指定したタイトル2</h2>
+            <p>コンテンツ</p>
+        </div>
+    </div>
+    <div class="scroll_area">
+        <p>スクロール領域を確保するためのエリア</p>
+    </div>
+    <div id="container">
+        <h1>タイトル</h1>
+        <p>説明説明説明</p>
+        <p>説明説明説明</p>
+    </div>
+    <div id="container">
+        <img src="https://picsum.photos/400/300?random=5.webp">
+        <img src="https://picsum.photos/300/400?random=6.webp">
+        <img src="https://picsum.photos/400/400?random=4.webp" class="emoji">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const targets = document.querySelectorAll('.fade');
+            const options = {
+                root: null,
+                rootMargin: '0px 0px 0px 0px',
+                threshold: 0.3,
+            };
+            const callback = (entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-active');
+                    }
+                });
+            });
+            const observer = new IntersectionObserver(callback, options);
+            targets.forEach(target => {
+                observer.observe(target);
+            });
+        });
+    </script>
+</body>
+
+</html>

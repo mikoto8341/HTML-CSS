@@ -2,6 +2,13 @@
 
 /*base------------------------------*/
 
+/*selection*/
+::selection {
+    color: #fff;
+    background-color: #123D88;
+}
+
+/*body*/
 body {
     color: #6c6c6f;
     font-family: Helvetica, sans-serif, Arial;
@@ -10,6 +17,7 @@ body {
     line-height: 1.75em;
 }
 
+/*img*/
 img {
     max-width: 100%;
     height: auto;
@@ -106,10 +114,23 @@ img {
     text-align: center;
     letter-spacing: 0.025em;
     line-height: 1;
+    transition: .2s;
+}
+
+.btn:hover {
+    color: #256BE6;
+    background-color: #fff;
+    border: solid #256BE6 1.5px;
 }
 
 .btn--second {
     background-color: #2DBE61;
+}
+
+.btn--second:hover {
+    color: #2DBE61;
+    background-color: #fff;
+    border: solid #2DBE61 1.5px;
 }
 
 .btn--outline {
@@ -117,8 +138,20 @@ img {
     border: 1px #fff solid;
 }
 
+.btn--outline:hover {
+    color: #505050;
+    background-color: #fff;
+    border: solid #505050 1.5px;
+}
+
 .btn--warning {
     background-color: #F87624;
+}
+
+.btn--warning:hover {
+    color: #F87624;
+    background-color: #fff;
+    border: solid #F87624 1.5px;
 }
 
 

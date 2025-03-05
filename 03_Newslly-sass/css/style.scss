@@ -54,6 +54,12 @@ $color-time: #BBBBBB;
 
 /*base----------------------------*/
 
+/*selection*/
+::selection {
+    color: #fff;
+    background-color: #FA6980;
+}
+
 /*body*/
 body {
     color: $color;
@@ -192,12 +198,18 @@ img {
     &__body {
         padding: 35px;
     }
+
+    &__body .btn {
+        @include btn();
+    }
+
+    &__body .btn:hover {
+        color: #FA6980;
+        background-color: #fff;
+        border: solid #FA6980 1.5px;
+    }
 }
 
-/*btn*/
-.btn {
-    @include btn();
-}
 
 
 /*about.html-----------------------------------*/
@@ -217,6 +229,12 @@ img {
 
     &__item .btn {
         background-color: $color-main;
+    }
+
+    &__item .btn:hover {
+        color: #202124;
+        background-color: #fff;
+        border: solid #202124 1.5px;
     }
 }
 

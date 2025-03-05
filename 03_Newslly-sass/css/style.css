@@ -1,6 +1,5 @@
 /*base----------------------------*/
 
-
 /*selection*/
 ::-moz-selection {
   color: #fff;
@@ -194,6 +193,7 @@ img {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.2s;
 }
 
 .card__body .btn:hover {

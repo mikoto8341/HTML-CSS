@@ -1,12 +1,11 @@
-/*declaration-------------------------*/
-/*variable*/
-/*mixin*/
 /*base----------------------------*/
+
 /*selection*/
 ::-moz-selection {
   color: #f6f6f6;
   background-color: #FA6980;
 }
+
 ::selection {
   color: #f6f6f6;
   background-color: #FA6980;
@@ -28,12 +27,15 @@ img {
   vertical-align: bottom;
 }
 
+
 /*common----------------------------*/
+
 /*header*/
 .header {
   padding: 30px 0 60px;
   text-align: center;
 }
+
 .header__inner {
   max-width: 800px;
   width: 90%;
@@ -47,17 +49,21 @@ img {
   color: #BBBBBB;
   background-color: #202124;
 }
+
 .footer__inner {
   max-width: 800px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .footer__copy {
   font-size: 12px;
 }
 
+
 /*module------------------------------*/
+
 /*post*/
 .post__category {
   margin-bottom: 10px;
@@ -94,17 +100,21 @@ img {
   line-height: 1.2777777778;
 }
 
+
 /*index.html---------------------------------*/
+
 /*more*/
 .more {
   padding-bottom: 60px;
 }
+
 .more__inner {
   max-width: 800px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .more__title {
   margin-bottom: 30px;
   padding-left: 10px;
@@ -115,6 +125,7 @@ img {
   line-height: 1.2916666667;
   text-transform: uppercase;
 }
+
 .more__list {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +133,7 @@ img {
   align-items: flex-start;
   margin-bottom: -60px;
 }
+
 .more__item {
   width: 47.5%;
   margin-bottom: 60px;
@@ -132,12 +144,14 @@ img {
   padding: 60px 0;
   background-color: #f6f6f6;
 }
+
 .trending__inner {
   max-width: 800px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .trending__title {
   margin-bottom: 30px;
   padding-left: 10px;
@@ -148,12 +162,14 @@ img {
   line-height: 1.2916666667;
   text-transform: uppercase;
 }
+
 .trending__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .trending__item {
   width: 47.5%;
   background-color: #fff;
@@ -163,6 +179,7 @@ img {
 .card__body {
   padding: 35px;
 }
+
 .card__body .btn {
   display: block;
   width: 160px;
@@ -178,27 +195,33 @@ img {
   text-transform: uppercase;
   transition: 0.2s;
 }
+
 .card__body .btn:hover {
   color: #FA6980;
   background-color: #fff;
   border: solid #FA6980 1.5px;
 }
 
+
 /*about.html-----------------------------------*/
+
 /*about*/
 .about {
   padding-bottom: 60px;
 }
+
 .about__inner {
   max-width: 800px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .about__item .post__title {
   padding-bottom: 10px;
   border-bottom: 1px #ddd solid;
 }
+
 .about__item .btn {
   margin-left: auto;
   display: block;
@@ -215,6 +238,7 @@ img {
   text-transform: uppercase;
   transition: 0.2s;
 }
+
 .about__item .btn:hover {
   color: #202124;
   background-color: #fff;
@@ -226,12 +250,14 @@ img {
   padding: 60px 0;
   background-color: #f6f6f6;
 }
+
 .discovery__inner {
   max-width: 800px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .discovery__title {
   margin-bottom: 30px;
   padding-left: 10px;
@@ -242,14 +268,17 @@ img {
   line-height: 1.2916666667;
   text-transform: uppercase;
 }
+
 .discovery__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .discovery__item {
   width: 30%;
   background-color: #fff;
 }
+
 /*# sourceMappingURL=style.css.map */

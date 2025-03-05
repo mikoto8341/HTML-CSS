@@ -2,6 +2,13 @@
 
 /*base---------------------------*/
 
+/*selection*/
+::selection {
+    color: #FFFFFF;
+    background-color: #FA6980;
+}
+
+/*body*/
 body {
     color: #888888;
     font-family: Helvetica, sans-serif, Arial;
@@ -9,6 +16,7 @@ body {
     line-height: 1.7em;
 }
 
+/*img*/
 img {
     max-width: 100%;
     height: auto;
@@ -95,6 +103,7 @@ img {
     line-height: 1.6em;
 }
 
+/*btn*/
 .btn {
     display: block;
     width: 160px;
@@ -105,6 +114,13 @@ img {
     font-weight: bold;
     text-align: center;
     line-height: 1.6em;
+    transition: .2s;
+}
+
+.btn:hover {
+    color: #FA6980;
+    background-color: #FFFFFF;
+    border: solid #FA6980 1.5px;
 }
 
 .btn--second {
@@ -113,6 +129,11 @@ img {
     margin-bottom: 40px;
 }
 
+.btn--second:hover {
+    color: #202124;
+    background-color: #FFFFFF;
+    border: solid #202124 1.5px;
+}
 
 /*index------------------------*/
 

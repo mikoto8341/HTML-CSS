@@ -36,14 +36,14 @@ $color-time: #BBBBBB;
     text-transform: uppercase;
 }
 
-@mixin btn() {
+@mixin btn($bg: #FA6980) {
     display: block;
     width: 160px;
     margin-top: 25px;
     margin-left: auto;
     padding: 14px 0;
     color: #fff;
-    background-color: $color-accent;
+    background-color: $bg;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
@@ -57,8 +57,8 @@ $color-time: #BBBBBB;
 
 /*selection*/
 ::selection {
-    color: #fff;
-    background-color: #FA6980;
+    color: $color-bg;
+    background-color: $color-accent;
 }
 
 /*body*/
@@ -205,9 +205,9 @@ img {
     }
 
     &__body .btn:hover {
-        color: #FA6980;
+        color: $color-accent;
         background-color: #fff;
-        border: solid #FA6980 1.5px;
+        border: solid $color-accent 1.5px;
     }
 }
 
@@ -229,13 +229,14 @@ img {
     }
 
     &__item .btn {
-        background-color: $color-main;
+        margin-left: auto;
+        @include btn(#202124);
     }
 
     &__item .btn:hover {
-        color: #202124;
+        color: $color-main;
         background-color: #fff;
-        border: solid #202124 1.5px;
+        border: solid $color-main 1.5px;
     }
 }
 

@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-/*varisble-------------------------------*/
+
+/*declaration--------------------*/
+
+/*varisble*/
 $color-text: #5A5A5A;
 $color-main: #ED145B;
 $breakpoints: (
@@ -8,6 +11,7 @@ $breakpoints: (
     "full": "screen and (min-width: 1300px)",
     ) !default;
 
+/*mixin*/
 @mixin m-query($breakpoint) {
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
@@ -40,7 +44,16 @@ $breakpoints: (
     );
 }
 
+
 /*base---------------------------------*/
+
+/*selection*/
+::selection {
+    color: #fff;
+    background-color: $color-main;
+}
+
+/*body*/
 body {
     color: $color-text;
     font-family: Verdana,
@@ -58,12 +71,9 @@ img {
     height: auto;
 }
 
-::selection {
-    color: $color-main;
-    background-color: #fff;
-}
 
 /*coomon-------------------------------*/
+
 /*header*/
 .header {
     position: fixed;
@@ -72,7 +82,7 @@ img {
     background-color: #000;
 
     &__inner {
-        @include m-inner();
+        @include m-inner(94.1%);
 
         @include m-flex();
     }
@@ -85,14 +95,21 @@ img {
 
     &__list {
         @include m-flex();
+        transition: .2s;
     }
 
     &__item {
-        padding-left: 30px;
+        margin-left: 20px;
+    }
+
+    &__item:hover {
+        color: $color-main;
+        border-bottom: solid $color-main 1.5px;
     }
 
     &__active {
         color: $color-main;
+        border-bottom: solid $color-main 1.5px;
     }
 }
 
@@ -105,6 +122,7 @@ img {
     background-color: $color-main;
     font-weight: bold;
     text-align: center;
+    transition: .2s;
 
     @include m-query(desktop) {
         margin-left: auto;
@@ -112,8 +130,20 @@ img {
     }
 }
 
+.btn:hover {
+    color: $color-main;
+    background-color: #fff;
+    border: solid $color-main 1.5px;
+}
+
 .btn--second {
     background-color: #EDAA14;
+}
+
+.btn--second:hover {
+    color: #EDAA14;
+    background-color: #fff;
+    border: solid #EDAA14 1.5px;
 }
 
 /*footer*/
@@ -130,7 +160,9 @@ img {
     }
 }
 
+
 /*index.html---------------------------*/
+
 /*visual*/
 .visual {
     margin-bottom: 80px;
@@ -211,6 +243,7 @@ img {
 
         @include m-query(desktop) {
             aspect-ratio: 4/3;
+            object-fit: cover;
         }
     }
 
@@ -223,7 +256,17 @@ img {
     }
 }
 
+.card:last-child {
+    padding-bottom: 15px;
+
+    @include m-query(desktop) {
+        padding-bottom: 0;
+    }
+}
+
+
 /*about.html---------------------------*/
+
 /*service*/
 .service {
     padding: 180px 0 80px;
@@ -276,6 +319,10 @@ img {
 
 .post:nth-child(odd) .post__title {
     margin-left: auto;
+
+    @include m-query(desktop) {
+        margin-left: inherit;
+    }
 }
 
 /*testmonials*/

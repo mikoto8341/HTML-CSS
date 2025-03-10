@@ -1,13 +1,16 @@
 @charset "utf-8";
 
-/* SETTING
-------------------------------*/
+
+/*declaration--------------------*/
+
+/*variable*/
 $color-text: #a5a5a5;
 $color-main: #ED145B;
 $color-sub: #2b2b2b;
 $color-bg: #f4f4f4;
 $color-accent: #14D0ED;
 
+/*mixin*/
 @mixin inner($w: 88%, $mw: 1140px) {
   width: $w;
   max-width: $mw;
@@ -27,8 +30,16 @@ $color-accent: #14D0ED;
   padding-bottom: $y;
 }
 
-/* BASE
-----------------------------------*/
+
+/* base----------------------------------*/
+
+/*selection*/
+::selection {
+  color: $color-bg;
+  background-color: $color-main;
+}
+
+/*body*/
 body {
   color: $color-text;
   font-size: 14px;
@@ -40,23 +51,27 @@ body {
   background-attachment: fixed;
 }
 
+/*img*/
 img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
 
+/*ul*/
 ul {
   padding-left: 0;
   list-style: none;
 }
 
+/*a*/
 a {
   text-decoration: none;
 }
 
-/* COMMON
-----------------------------------*/
+
+/* common----------------------------------*/
+
 /* btn */
 .btn {
   display: inline-block;
@@ -68,11 +83,12 @@ a {
   color: #fff;
   font-weight: bold;
   text-align: center;
-  transition: .3s;
+  transition: .2s;
 
   &:hover {
     color: $color-main;
     background-color: $color-bg;
+    border: solid $color-main 1.5px;
   }
 }
 
@@ -103,12 +119,12 @@ a {
   }
 
   &__text {
-    color: #fff;
-    transition: .3s;
+    color: $color-text;
+    transition: .2s;
   }
 
   &__text:hover {
-    text-shadow: 2px 3px 3px rgba(199, 55, 152, 0.85);
+    letter-spacing: 0.2em;
   }
 }
 
@@ -164,6 +180,7 @@ a {
     &:hover,
     &--current {
       color: $color-main;
+      border-bottom: solid $color-main 1.5px;
     }
   }
 }
@@ -183,8 +200,9 @@ a {
   }
 }
 
-/* INDEX
-----------------------------------*/
+
+/* index.html----------------------------------*/
+
 /* message */
 .message {
   padding: 160px 0;

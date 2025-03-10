@@ -1,15 +1,18 @@
 @charset "utf-8";
-/*variable--------------------*/
+
+/*declaration--------------------*/
+
+/*variable*/
 $color-text: #1b2d55;
 $color-main: #def6ff;
 $color-sub: #fff5de;
 $color-bg: #e8edf1;
-
 $breakpoints: (
     "nav": "screen and (min-width: 960px)",
     "desktop": "screen and (min-width: 740px)",
     ) !default;
 
+/*mixin*/
 @mixin m-query($breakpoint) {
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
@@ -51,7 +54,9 @@ line-height: (58/48);
     @return ($value/16)+rem;
 }
 
+
 /* base--------------------*/
+
 /*body*/
 body {
     color: $color-text;
@@ -68,7 +73,9 @@ img {
     vertical-align: bottom;
 }
 
+
 /*common--------------------*/
+
 /* header */
 .header {
     padding: (60em/14) 0;
@@ -106,6 +113,11 @@ img {
         margin-left: (30em/16);
         font-size: f-rem(16);
         line-height: (19/16);
+        transition: .2s;
+    }
+
+    &__item:hover {
+        border-bottom: solid $color-text 1.5px;
     }
 
     &__about {
@@ -115,6 +127,11 @@ img {
 
 /*footer*/
 .footer {
+    ::selection {
+        color: $color-bg;
+        background-color: $color-text;
+    }
+
     padding: (120em/14) 0 (200em/14);
     background-color: $color-bg;
 
@@ -228,6 +245,14 @@ img {
             font-weight: bold;
             line-height: (14/12);
             background-color: #fff;
+
+            span {
+                transition: .2s;
+            }
+
+            span:hover {
+                border-bottom: solid $color-text 1.5px;
+            }
         }
     }
 
@@ -247,16 +272,30 @@ img {
     width: 197px;
     margin-top: (60em/14);
     padding: (20em/14);
-    text-align: center;
     color: #fff;
+    background-color: $color-text;
     font-weight: bold;
     line-height: 1;
-    background-color: $color-text;
+    text-align: center;
+    transition: .2s;
 }
 
+.btn:hover {
+    color: $color-text;
+    background-color: #fff;
+    border: solid $color-text 1.5px;
+}
+
+
 /* index.html--------------------*/
+
 /* visual */
 .visual {
+    ::selection {
+        color: $color-main;
+        background-color: $color-text;
+    }
+
     padding-bottom: (60em/14);
     background-color: $color-main;
 
@@ -291,6 +330,11 @@ img {
 
 /*advantages*/
 .advantages {
+    ::selection {
+        color: #fff;
+        background-color: $color-text;
+    }
+
     padding: (120em/14) 0;
 
     &__title {
@@ -342,6 +386,11 @@ img {
 
 /* features */
 .features {
+    ::selection {
+        color: $color-sub;
+        background-color: $color-text;
+    }
+
     padding: (120em/14) 0;
     background-color: $color-sub;
 
